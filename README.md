@@ -1,3 +1,5 @@
-#groot
+# Groot
 
-The front-end trigger.
+A front-end buried monitoring plug-in.
+
+Under development, project introduction to be improved.
