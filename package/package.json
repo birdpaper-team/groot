@@ -1,5 +1,5 @@
 {
-  "name": "package",
+  "name": "groot",
   "version": "1.0.0",
   "description": "Groot core",
   "main": "index.js",
