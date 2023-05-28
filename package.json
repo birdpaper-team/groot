@@ -4,7 +4,8 @@
   "description": "A front-end buried monitoring plug-in",
   "main": "index.js",
   "scripts": {
-    "docs": "pnpm run -C docs dev"
+    "docs": "pnpm run -C docs dev",
+    "commit": "git-cz"
   },
   "keywords": [
     "前端监控",
@@ -17,5 +18,13 @@
     "vite": "^4.3.8",
     "vue-tsc": "^1.6.5"
   },
-  "license": "MIT"
+  "dependencies": {
+    "cz-customizable": "^7.0.0"
+  },
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  }
 }
