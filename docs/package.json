@@ -15,6 +15,7 @@
     "vite": "^4.3.8",
     "shiki": "^0.14.1",
     "vue": "^3.3.2",
+    "groot": "workspace:*",
     "vitepress": "1.0.0-beta.1"
   },
   "devDependencies": {

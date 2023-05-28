@@ -19,6 +19,9 @@ importers:
 
   docs:
     dependencies:
+      groot:
+        specifier: workspace:*
+        version: link:../package
       shiki:
         specifier: ^0.14.1
         version: registry.npmmirror.com/shiki@0.14.2

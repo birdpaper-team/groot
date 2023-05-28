@@ -7,4 +7,12 @@ export const sidebar = {
       ],
     },
   ],
+  "/debug/": [
+    {
+      text: "调试",
+      items: [
+        { text: "TEST", link: "/debug/index" },
+      ],
+    }
+  ]
 };
