@@ -1,7 +1,7 @@
-import { Groot } from "../types";
+class Groot {
+  constructor() {
+    console.log("[ constructor ]");
+  }
+}
 
-const groot: Groot = "groot";
-
-export default {
-  groot,
-};
+export default Groot;

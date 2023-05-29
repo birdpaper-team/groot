@@ -4,5 +4,7 @@
 
 <script setup lang="ts">
 import groot from "groot";
-console.log('[ groot ]-7', groot);
+
+const _g = new groot;
+// console.log('[ _g ]-10', _g);
 </script>
