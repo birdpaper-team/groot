@@ -1,1 +1,4 @@
-export type Groot = any;
+/** Plugin config */
+export interface GrootConfig {
+  postUrl: string;
+}
