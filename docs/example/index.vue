@@ -3,8 +3,9 @@
 </template>
 
 <script setup lang="ts">
-import groot from "groot";
+import { useGroot } from "groot";
 
-const _g = new groot;
+// const _g = new groot;
+
 // console.log('[ _g ]-10', _g);
 </script>

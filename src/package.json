@@ -12,6 +12,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vite": "^4.3.8"
+    "vite": "^4.3.8",
+    "vue": "^3.3.2"
   }
 }
