@@ -1,4 +1,4 @@
-import { Groot } from "./types";
+import { Groot } from "../types";
 
 const groot: Groot = "groot";
 

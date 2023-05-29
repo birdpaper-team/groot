@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "docs": "pnpm run -C docs dev",
+    "build": "pnpm run -C src build",
     "commit": "git-cz"
   },
   "keywords": [
