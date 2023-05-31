@@ -1,16 +1,26 @@
 import { App } from "vue";
 import useGroot from "./useGroot";
-import { GrootConfig } from "../types/index";
+import { GROOT_CONFIG } from "../types/App";
+import logger from "../utils/log";
+import deviceCollector from "./core/deviceCollector";
+import collector from "../entity/collector";
 
 class Groot {
-  public postUrl: string = "";
+  public api: string = "";
 
-  constructor(config: GrootConfig) {
-    this.postUrl = config.postUrl;
+  public collectorList: any[] = [];
+
+  constructor(config: GROOT_CONFIG) {
+    this.api = config.sendConfig.api;
   }
 
-  install(Vue: App) {
-    console.log("[ install ]-8", this.postUrl);
+  async install(Vue: App) {
+    logger.info(this.api);
+    this.collectorList.push(new deviceCollector());
+    for (let i = 0; i < this.collectorList.length; i++) {
+      let dataCollector: collector = this.collectorList[i];
+      await dataCollector.init();
+    }
   }
 }
 
