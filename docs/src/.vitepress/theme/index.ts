@@ -6,7 +6,11 @@ import "./font.less";
 import groot from "groot";
 
 const _groot = new groot({
-  postUrl: "I am groot",
+  env: "development",
+  debug: true,
+  sendConfig: {
+    api: "I am groot",
+  },
 });
 
 export default {
