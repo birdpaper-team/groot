@@ -4,7 +4,6 @@ import logger from "../../utils/log";
 export default class deviceCollector extends collector {
   public install() {
     logger.info(`[ DeviceCollector ] - Installed`);
-    const data = navigator;
-    logger.info(data);
+    // const data = navigator;
   }
 }
