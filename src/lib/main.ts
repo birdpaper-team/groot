@@ -17,9 +17,10 @@ class Groot {
   async install(Vue: App) {
     logger.info(this.api);
     this.collectorList.push(new deviceCollector());
+
     for (let i = 0; i < this.collectorList.length; i++) {
       let dataCollector: collector = this.collectorList[i];
-      await dataCollector.init();
+      dataCollector.init();
     }
   }
 }
