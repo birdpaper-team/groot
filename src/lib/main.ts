@@ -1,26 +1,22 @@
 import { App } from "vue";
-import useGroot from "./useGroot";
 import { GROOT_CONFIG } from "../types/app";
-import logger from "../utils/log";
 import deviceCollector from "./core/deviceCollector";
 import collector from "../entity/collector";
-import appCollector from "./core/appCollector";
+import appCore from "./core/appCore";
+import useGroot from "./useGroot";
 
 class Groot {
-  public api: string = "";
-
-  public collectorList: any[] = [];
+  public coreList: any[] = [];
 
   constructor(config: GROOT_CONFIG) {
-    this.api = config.sendConfig.api;
+    new appCore(config);
   }
 
   async install(Vue: App) {
-    logger.info(this.api);
-    this.collectorList = [new appCollector(), new deviceCollector()];
+    this.coreList.push(new deviceCollector());
 
-    for (let i = 0; i < this.collectorList.length; i++) {
-      let dataCollector: collector = this.collectorList[i];
+    for (let i = 0; i < this.coreList.length; i++) {
+      let dataCollector: collector = this.coreList[i];
       dataCollector.init();
     }
   }

@@ -6,6 +6,6 @@ export enum CACHE_MODE {
 /** 缓存数据的 Key */
 export enum CACHE_KEY {
   Uuid = "_groot_uuid",
-  App = "_groot_app",
+  Config = "_groot_config",
   Device = "_groot_device",
 }
