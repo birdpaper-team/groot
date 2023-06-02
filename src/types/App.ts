@@ -1,4 +1,4 @@
-export type Environment = "development" | "production" | string;
+export type ENVIRONMENT = "development" | "production" | string;
 
 export type IS_DEBUG = boolean;
 
@@ -7,8 +7,10 @@ export interface SEND_CONFIG {
 }
 
 export interface GROOT_CONFIG {
-  env: Environment;
+  env: ENVIRONMENT;
   debug?: IS_DEBUG;
   sendConfig: SEND_CONFIG;
   customPaylod?: object;
 }
+
+export type UUID = string;
