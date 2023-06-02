@@ -32,7 +32,7 @@ export class Cache {
    * 删除缓存
    * @param key
    */
-  remove = (key: CACHE_KEY) => {};
+  remove = (key: CACHE_KEY) => this.modeMap[this.mode].remove(key);
 
   /** 获取当前缓存方式 */
   getMode = () => this.mode;
