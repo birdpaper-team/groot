@@ -1,5 +1,7 @@
 import { CACHE_KEY, CACHE_MODE } from "../types/cache";
+import { isArray } from "./common";
 import { _localStorage } from "./localStorage";
+import logger from "../utils/log";
 
 /**
  * 数据缓存统一处理工具
@@ -33,6 +35,25 @@ export class Cache {
    * @param key
    */
   remove = (key: CACHE_KEY) => this.modeMap[this.mode].remove(key);
+
+  /**
+   * 追加数据
+   * @param key key
+   * @param data 数据包
+   */
+  add(key: CACHE_KEY, data: string | object | Array<unknown>) {
+    try {
+      let _data: unknown[] = (this.find(key, true) as unknown[]) || [];
+      if (_data.length !== 0 && !isArray(_data)) {
+        throw new Error(`[ cache.ts: add ] - The ${key} must be array`);
+      }
+
+      _data.push(data);
+      this.save(key, _data, true);
+    } catch (err) {
+      logger.error((err as Error).message);
+    }
+  }
 
   /** 获取当前缓存方式 */
   getMode = () => this.mode;
