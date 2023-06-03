@@ -8,4 +8,5 @@ export enum CACHE_KEY {
   Uuid = "_groot_uuid",
   Config = "_groot_config",
   Device = "_groot_device",
+  Custom = "_groot_custom",
 }
