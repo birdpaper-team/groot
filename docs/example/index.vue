@@ -5,7 +5,11 @@
 <script setup lang="ts">
 import { useGroot } from "groot";
 
-// const { _uuid } = useGroot();
+const { record } = useGroot();
+
+// record({
+//   name: "123",
+// });
 
 // const _g = new groot;
 

@@ -6,17 +6,17 @@ import appCore from "./core/appCore";
 import useGroot from "./useGroot";
 
 class Groot {
-  public coreList: any[] = [];
+  public coreCollectors: collector[] = [];
 
   constructor(config: GROOT_CONFIG) {
     new appCore(config);
   }
 
   async install(Vue: App) {
-    this.coreList.push(new deviceCollector());
+    this.coreCollectors.push(new deviceCollector());
 
-    for (let i = 0; i < this.coreList.length; i++) {
-      let dataCollector: collector = this.coreList[i];
+    for (let i = 0; i < this.coreCollectors.length; i++) {
+      let dataCollector: collector = this.coreCollectors[i];
       dataCollector.init();
     }
   }
