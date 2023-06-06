@@ -4,24 +4,21 @@ export enum DEVICE_TYPE {
 
   Windows = "Windows",
 
-  Mac = "Mac",
+  Mac = "macOS",
 
   iPhone = "iPhone",
 
   iPad = "iPad",
 
+  iPod = "iPod",
+
+  Linux = "Linux",
+
+  Chrome = "Chrome",
+
+  Chromium = "Chromium",
+
   unknown = "Unknow",
-}
-
-/** 系统类型 */
-export enum SYSTEM_TYPE {
-  Android = "Android",
-
-  Windows = "Windows",
-
-  Mac = "Mac",
-
-  IOS = "IOS",
 }
 
 /** 浏览器类型 */

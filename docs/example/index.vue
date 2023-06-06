@@ -1,17 +1,17 @@
 <template>
-  <div>epa</div>
+  <div>deviceType: {{ deviceData.deviceType }}</div>
 </template>
 
 <script setup lang="ts">
 import { useGroot } from "groot";
+import { onMounted, ref } from "vue";
 
-const { record } = useGroot();
+const { getDeviceData } = useGroot();
+const deviceData = ref<any>({
+  deviceType: "",
+});
 
-// record({
-//   name: "123",
-// });
-
-// const _g = new groot;
-
-// console.log('[ _g ]-10', _g);
+onMounted(() => {
+  deviceData.value = getDeviceData();
+});
 </script>

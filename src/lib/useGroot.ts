@@ -18,8 +18,13 @@ export default function useGroot() {
     cache.add(CACHE_KEY.Custom, _data);
   };
 
+  const getDeviceData = () => {
+    return cache.find(CACHE_KEY.Device, true);
+  };
+
   return {
     _uuid,
     record,
+    getDeviceData
   };
 }

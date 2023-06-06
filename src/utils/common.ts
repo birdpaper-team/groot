@@ -7,3 +7,16 @@ export const getUuid = () => {
 export const isArray = (obj: unknown) => {
   return obj && typeof obj === "object" && obj.propertyIsEnumerable(length);
 };
+
+export const getUserAgentData = () => {
+  try {
+    const userAgentData = navigator["userAgentData"];
+    if (userAgentData) {
+      return userAgentData;
+    }
+
+    return null;
+  } catch (err) {
+    return null;
+  }
+};
